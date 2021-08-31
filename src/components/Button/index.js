@@ -1,8 +1,12 @@
 import React from "react";
 import "./index.scss";
 
-const Button = ({ children }) => {
-  return <div className="button">{children}</div>;
+const Button = ({ children, handleSubmit }) => {
+  return (
+    <div className="button" onClick={handleSubmit}>
+      {children}
+    </div>
+  );
 };
 
 export default Button;

@@ -10,6 +10,7 @@ import Result from "../modules/Result";
 const Routes = () => {
   return (
     <Router>
+      <Header />
       <Switch>
         <Route exact path="/" component={FrontPage} />
         <Route exact path="/quiz" component={Quiz} />
