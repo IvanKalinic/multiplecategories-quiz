@@ -1,10 +1,10 @@
 import "./App.css";
-import FrontPage from "./modules/FrontPage";
+import Routes from "./routes";
 
 function App() {
   return (
-    <div className="App">
-      <FrontPage />
+    <div className="app">
+      <Routes />
     </div>
   );
 }

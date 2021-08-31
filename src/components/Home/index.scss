@@ -1,0 +1,31 @@
+.home-content {
+  display: flex;
+  justify-content: space-around;
+}
+.settings-container {
+  width: 45%;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  font-family: "Poppins", sans-serif;
+  font-weight: 300;
+}
+.banner {
+  margin-top: 50px;
+  margin-right: 50px;
+  align-self: center;
+}
+
+@media (max-width: 800px) {
+  .home-content {
+    flex-direction: column-reverse;
+    align-items: center;
+  }
+  .banner {
+    margin-right: 0;
+  }
+  .settings-container {
+    width: 100%;
+  }
+}
