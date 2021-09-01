@@ -13,10 +13,16 @@ export const useUser = () => {
 };
 export const UserProvider = ({ children }) => {
   const [name, setName] = useState("");
+  const [questions, setQuestions] = useState();
+  const [score, setScore] = useState(0);
 
   const value = {
     name,
+    score,
+    questions,
     setName,
+    setScore,
+    setQuestions,
   };
   return <UserContext.Provider value={value}>{children}</UserContext.Provider>;
 };

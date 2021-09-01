@@ -8,26 +8,29 @@ import Button from "../Button";
 import ErrorMessage from "../ErrorMessage";
 import { useHistory } from "react-router-dom";
 import { useUser } from "../../context/UserContext";
+import { fetchQuestions } from "../../api";
 
 const Home = () => {
   const [category, setCategory] = useState("");
   const [difficulty, setDifficulty] = useState("");
   const [error, setError] = useState(false);
 
-  const { name, setName } = useUser();
+  const { name, setName, questions, score } = useUser();
 
   const history = useHistory();
 
   const handleSubmit = () => {
-    if (!category || !difficulties || !name) {
+    if (!category || !difficulties || !name || name === " ") {
       setError(true);
     } else {
       setError(false);
-      //   fetchQuestions(category, difficulty);
+      fetchQuestions(category, difficulty).then((data) => console.log(data));
       history.push("/quiz");
     }
   };
 
+  console.log(difficulty);
+  console.log(category);
   return (
     <div className="home-content">
       <div className="settings-container">

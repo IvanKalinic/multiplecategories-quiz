@@ -6,8 +6,12 @@ const SelectDropdown = ({ data, setItem }) => {
   const [selected, setSelected] = useState(data[0].category);
 
   const handleOnClick = (item) => {
-    setSelected(item);
-    setItem(item);
+    setSelected(item.category);
+    if (item.value > 3) {
+      setItem(item.value);
+    } else {
+      setItem(item.category.toLowerCase());
+    }
     setOpen(!open);
   };
 
@@ -22,7 +26,7 @@ const SelectDropdown = ({ data, setItem }) => {
           {data.map((option, index) => {
             return (
               <span
-                onClick={() => handleOnClick(option.category)}
+                onClick={() => handleOnClick(option)}
                 className={
                   selected === option.category
                     ? "custom-option selected"
