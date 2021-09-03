@@ -10,8 +10,8 @@ a {
 }
 
 .app {
-  min-height: 98.5vh;
-  height: 100vh;
+  min-height: 100vh;
   background-image: url("/src/assets/images/background.jpg");
   background-size: cover;
+  background-repeat: repeat;
 }

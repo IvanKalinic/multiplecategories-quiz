@@ -23,7 +23,7 @@ const Quiz = () => {
           ...questions[currentQuestion]?.incorrect_answers, // dividing in 3 separate elements
         ])
     );
-  }, [questions]);
+  }, [questions, currentQuestion]);
 
   console.log(options);
 
