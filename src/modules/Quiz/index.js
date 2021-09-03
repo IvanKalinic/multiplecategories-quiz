@@ -44,7 +44,32 @@ const Quiz = () => {
           />
         </div>
       ) : (
-        ""
+        <div>
+          <div className="question-container skeleton-container">
+            <h1></h1>
+            <div className="skeleton-question">
+              <h2 className="skeleton-heading first"></h2>
+              <div className="options-select">
+                <button className="skeleton-btn">
+                  <h2 className="current-question skeleton-heading"></h2>
+                  <h2 className="current-question skeleton-heading"></h2>
+                </button>
+                <button className="skeleton-btn">
+                  <h2 className="current-question skeleton-heading"></h2>
+                  <h2 className="current-question skeleton-heading"></h2>
+                </button>
+                <button className="skeleton-btn">
+                  <h2 className="current-question skeleton-heading"></h2>
+                  <h2 className="current-question skeleton-heading"></h2>
+                </button>
+                <button className="skeleton-btn">
+                  <h2 className="current-question skeleton-heading"></h2>
+                  <h2 className="current-question skeleton-heading"></h2>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
       )}
     </div>
   );
