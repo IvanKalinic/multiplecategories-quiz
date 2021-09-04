@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { useUser } from "../../context/UserContext";
+import { useUser } from "../../context/user/UserContext";
 import ErrorMessage from "../ErrorMessage";
 import "./index.scss";
 import { useHistory } from "react-router-dom";

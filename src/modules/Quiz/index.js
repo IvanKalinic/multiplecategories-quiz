@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import Question from "../../components/Question";
-import { useUser } from "../../context/UserContext";
+import { useUser } from "../../context/user/UserContext";
 import "./index.scss";
 
 const Quiz = () => {

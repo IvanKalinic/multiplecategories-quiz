@@ -7,7 +7,7 @@ import { categories, difficulties } from "../../const";
 import Button from "../Button";
 import ErrorMessage from "../ErrorMessage";
 import { useHistory } from "react-router-dom";
-import { useUser } from "../../context/UserContext";
+import { useUser } from "../../context/user/UserContext";
 import { fetchQuestions } from "../../api";
 
 const Home = () => {
@@ -15,7 +15,7 @@ const Home = () => {
   const [difficulty, setDifficulty] = useState("");
   const [error, setError] = useState(false);
 
-  const { name, setName, questions, setQuestions, score } = useUser();
+  const { name, setName, setQuestions } = useUser();
 
   const history = useHistory();
 

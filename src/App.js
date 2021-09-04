@@ -1,13 +1,13 @@
 import "./App.css";
-import { UserProvider } from "./context/UserContext";
+import { UserState } from "./context/user/UserState";
 import Routes from "./routes";
 
 function App() {
   return (
     <div className="app">
-      <UserProvider>
+      <UserState>
         <Routes />
-      </UserProvider>
+      </UserState>
     </div>
   );
 }
