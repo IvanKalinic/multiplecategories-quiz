@@ -56,3 +56,34 @@
   width: 100%;
   justify-content: space-around;
 }
+.btn {
+  min-width: 200px;
+  color: white;
+  padding: 10px 50px;
+  outline: none;
+  text-align: center;
+  box-sizing: border-box;
+  box-shadow: none;
+  border-radius: 2em;
+  text-shadow: 0 0.04em 0.04em rgba(0, 0, 0, 0.35);
+  transition: all 0.2s;
+}
+.quit-btn {
+  font-weight: 400;
+  background-color: #cc0000;
+  border: 2.56px solid #cc0000;
+
+  &:hover {
+    border-color: rgba(255, 255, 255, 1);
+  }
+}
+
+.next-btn {
+  background-color: #4095c6;
+  font-weight: 400;
+  border: 2.56px solid #4095c6;
+
+  &:hover {
+    border-color: rgba(255, 255, 255, 1);
+  }
+}

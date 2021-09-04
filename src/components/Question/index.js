@@ -57,8 +57,9 @@ const Question = ({
         <h2 className="current-question">
           {questions[currentQuestion].question}
         </h2>
+        <br />
+        {error && <ErrorMessage>{error}</ErrorMessage>}
         <div className="options-select">
-          {error && <ErrorMessage>{error}</ErrorMessage>}
           {options &&
             options.map((opt, i) => (
               <button
@@ -74,10 +75,10 @@ const Question = ({
             ))}
         </div>
         <div className="controls">
-          <button className="quit-btn" onClick={handleQuit}>
+          <button className="btn quit-btn" onClick={handleQuit}>
             Quit
           </button>
-          <button className="next-btn" onClick={handleNext}>
+          <button className="btn next-btn" onClick={handleNext}>
             Next Question
           </button>
         </div>

@@ -9,7 +9,7 @@ const Result = () => {
   return (
     <div className="result">
       <span className="title">Final score : {score}</span>
-      <button>
+      <button className="btn next-btn result-btn" style={{ marginTop: 20 }}>
         <Link className="home-link" to="/">
           Go To Homepage
         </Link>
