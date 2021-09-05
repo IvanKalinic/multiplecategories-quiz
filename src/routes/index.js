@@ -1,25 +1,29 @@
-import React from "react";
+import React, { memo, lazy, Suspense } from "react";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Header from "../components/Header";
-import FrontPage from "../modules/FrontPage";
-import Error from "../modules/Error";
 import Footer from "../components/Footer";
-import Quiz from "../modules/Quiz";
-import Result from "../modules/Result";
+import Loader from "../components/Loader";
+
+const Error = lazy(() => import("../modules/Error"));
+const Quiz = lazy(() => import("../modules/Quiz"));
+const Result = lazy(() => import("../modules/Result"));
+const FrontPage = lazy(() => import("../modules/FrontPage"));
 
 const Routes = () => {
   return (
     <Router>
       <Header />
-      <Switch>
-        <Route exact path="/" component={FrontPage} />
-        <Route exact path="/quiz" component={Quiz} />
-        <Route exact path="/result" component={Result} />
-        <Route exact path="*" component={Error} />
-      </Switch>
-      <Footer />
+      <Suspense fallback={<Loader />}>
+        <Switch>
+          <Route exact path="/" component={FrontPage} />
+          <Route exact path="/quiz" component={Quiz} />
+          <Route exact path="/result" component={Result} />
+          <Route exact path="*" component={Error} />
+        </Switch>
+        <Footer />
+      </Suspense>
     </Router>
   );
 };
 
-export default Routes;
+export default memo(Routes);
