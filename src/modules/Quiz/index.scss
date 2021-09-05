@@ -1,7 +1,7 @@
+@use "src/assets/styles/_index.scss" as *;
+
 .quiz-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  @include flexbox(column, center, center);
 }
 
 .subtitle {

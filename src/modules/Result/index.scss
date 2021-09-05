@@ -1,7 +1,7 @@
+@use "src/assets/styles/_index.scss" as *;
+
 .result {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+  @include flexbox(column, "", center);
   height: 60vh;
   text-align: center;
 }
